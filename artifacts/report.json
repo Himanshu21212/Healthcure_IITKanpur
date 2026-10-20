@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "source": "synthetic (160 patients x 12 days)",
+    "n_patients": 160,
+    "window_min": 120,
+    "horizon_min": "60-120",
+    "threshold_mgdl": 180
+  },
+  "ablation": {
+    "CGM only": {
+      "roc_auc": 0.9385132503742706,
+      "pr_auc": 0.7689235753892665,
+      "brier": 0.08240672132956396,
+      "event_rate": 0.21372377622377622,
+      "sensitivity_at_10pct_far": 0.783640081799591,
+      "n_features": 10
+    },
+    "CGM + Wearable": {
+      "roc_auc": 0.9471311089664673,
+      "pr_auc": 0.8049647704828198,
+      "brier": 0.0763438803825792,
+      "event_rate": 0.21372377622377622,
+      "sensitivity_at_10pct_far": 0.8353783231083844,
+      "n_features": 17
+    },
+    "CGM + Wearable + EHR": {
+      "roc_auc": 0.9501735115282178,
+      "pr_auc": 0.8201966283102863,
+      "brier": 0.0740184701013107,
+      "event_rate": 0.21372377622377622,
+      "sensitivity_at_10pct_far": 0.8366053169734151,
+      "n_features": 29
+    }
+  },
+  "full_model": {
+    "roc_auc": 0.9501735115282178,
+    "pr_auc": 0.8201966283102863,
+    "brier": 0.07401847013482486,
+    "event_rate": 0.21372377622377622,
+    "sensitivity_at_10pct_far": 0.8366053169734151,
+    "operating_threshold": 0.3884792799873257,
+    "operating_far": 0.1,
+    "mean_lead_time_min": 50.0
+  },
+  "error_grid": {
+    "A": 0.8300877192982457,
+    "B": 0.12789473684210526,
+    "C": 0.0028947368421052633,
+    "D": 0.03912280701754386,
+    "E": 0.0,
+    "AB_fraction": 0.9579824561403509,
+    "rmse": 31.70944180500248,
+    "mae": 16.818174339979294
+  },
+  "backend": "sklearn-histgb"
+}
