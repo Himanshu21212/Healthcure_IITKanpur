@@ -24,7 +24,7 @@
 |---|---|
 | **Team name** | **Healthcure** |
 | **College / Incubator** | **IIT Kanpur** |
-| **Team leader** | **Himanshu** — IIT Kanpur |
+| **Team leader** | **Himanshu**: IIT Kanpur |
 | **Team size** | 1 (individual participant) |
 | **Contact** | [himanshugh23@iitk.ac.in](mailto:himanshugh23@iitk.ac.in) |
 
@@ -54,7 +54,7 @@ whose smartwatch and hospital records never talk to each other.
 **How it's used:** a doctor opens the GlucoTwin dashboard and sees each virtual
 patient's live glucose curve with a **shaded predicted-risk window**, a **risk
 gauge and alert**, an **explanation** of *why* the patient is at risk right now,
-and a **what-if panel** to test interventions — e.g. *a 20-minute walk takes this
+and a **what-if panel** to test interventions  e.g. *a 20-minute walk takes this
 patient's risk from 68% down to 37%*. This supports **remote monitoring and
 triage** (one clinician, hundreds of patients ranked by risk), **personalised
 lifestyle coaching**, and **earlier action** that slows complications such as
@@ -65,7 +65,7 @@ kidney, eye and heart disease.
 | Stream | Type | Fields | Source in this PoC |
 |---|---|---|---|
 | **EHR** | Static / historical | demographics, BMI, HbA1c, fasting glucose, diabetes duration, medications (metformin/insulin/sulfonylurea), comorbidities (HTN, CKD, retinopathy), family history (genetic-risk proxy) | Synthetic engine (Synthea-style) · real-data loader for **MIMIC-IV / Synthea** |
-| **Wearable + CGM** | Dynamic / real-time | continuous glucose (CGM), heart rate, **HRV**, steps, sleep stage, meal events — every 15 min | Synthetic engine · real-data loader for **ShanghaiT2DM**, **PPG-DaLiA**, **MMASH** |
+| **Wearable + CGM** | Dynamic / real-time | continuous glucose (CGM), heart rate, **HRV**, steps, sleep stage, meal events every 15 min | Synthetic engine · real-data loader for **ShanghaiT2DM**, **PPG-DaLiA**, **MMASH** |
 
 **How the fusion works (and why it's real):** at each timestep we build one
 feature vector = *[summary of the last 2 h of the dynamic streams] ‖ [the static
@@ -94,11 +94,11 @@ Our **ablation study proves each stream adds predictive value** (§8).
    feature vector → probability of a hyperglycemic event in the next 60–120 min.
    Chosen for interpretability, speed, and native SHAP support on a PoC-sized
    dataset. (We considered a Transformer and chose the simpler model
-   deliberately — justified restraint over buzzword-stacking.)
+   deliberately justified restraint over buzzword-stacking.)
 2. **Glucose forecaster:** a regression head predicting glucose at +60 min, used
    for the **Clarke Error Grid** clinical-safety evaluation.
 3. **Optional LSTM arm:** encodes the raw multivariate window; the static EHR
-   vector is concatenated at the dense head (**late fusion**) — the same fusion
+   vector is concatenated at the dense head (**late fusion**) the same fusion
    point, shown to generalise to sequence models.
 4. **Counterfactual engine** (`src/simulate/`): perturbs controllable levers
    (activity, carbs, medication, sleep) and re-scores risk → this is what makes
@@ -192,7 +192,7 @@ Healthcure_IITKanpur/
 
 ## 12. Open-source license
 
-Released under the **MIT License** — see [`LICENSE`](LICENSE). All datasets
+Released under the **MIT License** see [`LICENSE`](LICENSE). All datasets
 referenced are used under their own open licenses; no proprietary or identifiable
 patient data is included.
 
