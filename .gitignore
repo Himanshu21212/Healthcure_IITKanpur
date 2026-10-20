@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Regenerable data artifacts (recreated by `python run.py` in ~45s)
+artifacts/*.parquet
+artifacts/*.joblib
+data/*
+
+# Keep the committed results + plots so the README renders on GitHub:
+!artifacts/report.json
+!artifacts/plots/
+
+# OS / editor
+.DS_Store
+*.swp

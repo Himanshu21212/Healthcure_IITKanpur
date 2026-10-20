@@ -1,0 +1,15 @@
+# GlucoTwin configuration (defaults used by run.py)
+cohort:
+  n_patients: 160
+  n_days: 12
+  seed: 42
+
+prediction:
+  window_min: 120        # trailing wearable+CGM window used as input
+  horizon_min: [60, 120] # predict an event in this future window
+  hyper_threshold_mgdl: 180
+  stride: 2              # subsample training points (every 30 min)
+
+evaluation:
+  target_false_alarm_rate: 0.10
+  forecast_horizon_min: 60

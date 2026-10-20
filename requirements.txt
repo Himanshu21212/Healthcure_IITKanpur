@@ -1,0 +1,15 @@
+# Core (required) -- the pipeline + dashboard run on these alone.
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.3
+matplotlib>=3.7
+joblib>=1.3
+pyarrow>=12.0
+streamlit>=1.30
+plotly>=5.18
+
+# Optional (auto-detected; improve the PoC but not required to run)
+# xgboost>=2.0      # swapped in automatically as the classifier if installed
+# shap>=0.44        # exact tree explanations in the dashboard
+# torch>=2.1        # enables the optional LSTM fusion arm (sequence_model.py)
+# openpyxl>=3.1     # needed only to read real ShanghaiT2DM .xlsx CGM files
