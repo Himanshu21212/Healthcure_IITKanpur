@@ -1,9 +1,8 @@
 """
 Real-dataset loaders (optional).
 
-GlucoTwin runs fully on its built-in synthetic engine, so judges can clone and
-run with ZERO downloads. These loaders let a team swap in real open datasets to
-strengthen the PoC. Each returns the same (ehr, timeseries) contract as
+GlucoTwin runs fully on its built-in synthetic engine, so the repo can be cloned
+and run with zero downloads. These loaders swap in real open datasets instead. Each returns the same (ehr, timeseries) contract as
 src.data.synthetic.generate_dataset, so the rest of the pipeline is unchanged.
 
 Supported open datasets (see README for links & licenses):
@@ -13,8 +12,8 @@ Supported open datasets (see README for links & licenses):
   * PPG-DaLiA                     -- wrist HR + activity
   * MMASH                         -- 24h HRV, sleep, activity
 
-All loaders are intentionally thin and defensive: if the file layout differs,
-they raise a clear error pointing to the expected schema rather than guessing.
+If a file layout differs from what is expected, the loaders raise an error
+naming the expected schema instead of guessing.
 """
 
 from __future__ import annotations

@@ -1,5 +1,5 @@
 """
-GlucoTwin — Clinician Dashboard (Streamlit).
+GlucoTwin - Clinician Dashboard (Streamlit).
 
 How a doctor interacts with the virtual patient:
   * pick a patient -> see their EHR twin card,
@@ -210,7 +210,7 @@ with right:
                "and EHR (HbA1c, CKD, meds) drivers.")
 
 # --------------------------------------------------------------------------- #
-# What-if simulation — the TWIN feature
+# What-if simulation
 st.divider()
 st.subheader("🔮 What-if simulation — intervene on the virtual patient")
 sim = simulate(clf, cur[feature_cols].to_frame().T, feature_cols)

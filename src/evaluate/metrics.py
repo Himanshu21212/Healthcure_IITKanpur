@@ -1,8 +1,7 @@
 """
-Clinically-literate evaluation for GlucoTwin.
+Evaluation metrics for GlucoTwin.
 
-We deliberately do NOT lead with raw accuracy. For an early-warning system a
-clinician cares about:
+Accuracy is misleading when events are rare, so instead we report:
 
   * how far ahead we warn (lead time),
   * how many true events we catch at a tolerable false-alarm rate

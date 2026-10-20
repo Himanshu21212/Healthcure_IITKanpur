@@ -6,7 +6,7 @@ vector -- interpretable, fast, SHAP-friendly. An optional LSTM sequence encoder
 lives in models/sequence_model.py and is trained by run.py when PyTorch is
 installed; the tree model is the always-on backbone that powers the dashboard.
 
-The headline experiment is the 3-way ABLATION, which proves the fusion is real:
+The main experiment is a 3-way ablation, to check that each stream helps:
 
     CGM only  ->  CGM + Wearable  ->  CGM + Wearable + EHR
 

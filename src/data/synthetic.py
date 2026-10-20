@@ -12,8 +12,8 @@ Generates two fused data streams for a cohort of virtual Type-2-Diabetes patient
 
 The two streams are linked through a latent, per-patient `glycemic_instability`
 score derived from the EHR. That score drives how violently the dynamic glucose
-trace reacts to meals and how protective activity/sleep are. This is what makes
-the fusion *real*: neither stream alone is enough to predict an excursion.
+trace reacts to meals and how protective activity/sleep are, so neither
+stream alone is enough to predict an excursion.
 
 Everything is reproducible from a single seed. No real patient data is used,
 in line with the DPDP Act (India) and HIPAA.

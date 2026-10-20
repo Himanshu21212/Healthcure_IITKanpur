@@ -11,7 +11,7 @@ At each time point t we build a single feature vector that FUSES:
 
 The fusion is a late concatenation: dynamic window features || static EHR
 features. The ablation study in models/train.py toggles which blocks are
-included, to prove each stream adds predictive value.
+included, to measure what each stream adds.
 """
 
 from __future__ import annotations

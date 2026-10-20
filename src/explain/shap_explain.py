@@ -1,9 +1,8 @@
 """
 Explainability for GlucoTwin.
 
-A clinician will not trust a black box. For every risk score we expose the
-features that drove it, using SHAP when available and a model-agnostic
-permutation / contribution fallback otherwise. The dashboard renders these as
+For every risk score we show the features that drove it, using SHAP when
+available and a model-agnostic permutation / contribution fallback otherwise. The dashboard renders these as
 "why is this patient at risk right now" bars.
 """
 

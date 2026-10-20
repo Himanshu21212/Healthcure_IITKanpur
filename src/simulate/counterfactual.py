@@ -1,6 +1,5 @@
 """
-Counterfactual 'what-if' simulation -- the feature that makes this a TWIN,
-not just a classifier.
+Counterfactual 'what-if' simulation.
 
 Given a patient's current fused feature vector, we perturb controllable
 lifestyle / treatment levers and re-score the risk, so a doctor can ask:

@@ -8,9 +8,7 @@ EHR vector at the dense head (late fusion) before the risk output.
 
 It is OPTIONAL: run.py trains it only when PyTorch is installed. The gradient-
 boosted tree model is the always-on backbone that powers the dashboard, so the
-pipeline never hard-depends on a heavyweight DL stack. Keeping both is a
-deliberate PoC choice -- trees for interpretability + speed, LSTM to show the
-architecture generalises to sequence models.
+pipeline doesn't depend on PyTorch.
 """
 
 from __future__ import annotations
